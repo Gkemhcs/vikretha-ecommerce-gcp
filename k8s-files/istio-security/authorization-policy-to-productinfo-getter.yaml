@@ -1,0 +1,23 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: frontend-to-product-info
+  namespace: data
+spec:
+  selector:
+    matchLabels:
+      id:  product-info
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+       
+        principals: ["cluster.local/ns/frontend/sa/frontend"]
+
+    to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/product/*","/buy/*"]
+   
+  
+  

@@ -1,0 +1,22 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: frontend-to-authentication-server
+  namespace: data
+spec:
+  selector:
+    matchLabels:
+      id: authentication-server
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+       
+        principals: ["cluster.local/ns/frontend/sa/frontend"]
+
+    to:
+    - operation:
+        methods: ["POST"]
+        paths: ["/register","/login"]
+  
+  

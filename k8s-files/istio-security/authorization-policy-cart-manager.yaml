@@ -1,0 +1,25 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: frontend-to-cart-manager
+  namespace: data
+spec:
+  selector:
+    matchLabels:
+      id: cart-manager
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+       
+        principals: ["cluster.local/ns/frontend/sa/frontend"]
+
+    to:
+    - operation:
+        methods: ["POST"]
+        paths: ["/add","/cart/delete"]
+    - operation:
+        methods:  ["GET"]
+        paths: ["/cart/*"]
+  
+  

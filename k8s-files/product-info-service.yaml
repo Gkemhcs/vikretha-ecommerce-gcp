@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+   name: product-info
+   namespace: data 
+   labels:
+     id: product-info
+spec:
+  type: ClusterIP
+  selector:
+     pod: product-info
+  ports:
+  - targetPort: 8080
+    port: 80

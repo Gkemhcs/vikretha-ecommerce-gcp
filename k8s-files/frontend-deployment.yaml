@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: frontend 
+    namespace: frontend 
+    
+spec:
+   replicas: 1
+   selector:
+     matchLabels:
+        pod: frontend
+   template:
+      metadata:
+         labels:
+           pod: frontend
+           id: frontend
+      spec:
+         serviceAccountName: frontend 
+         containers:
+         - name: cnt-1 
+           image: us-central1-docker.pkg.dev/PROJECT_ID/repo-vikretha/frontend
+           env:
+             - name: topicName
+               value: order-info  
+           ports:
+           - containerPort: 8080
+
+          

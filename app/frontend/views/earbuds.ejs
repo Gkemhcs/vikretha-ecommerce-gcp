@@ -1,0 +1,137 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Vikretha - Earbuds Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        .navbar-brand {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #0066ff, #6600ff);
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 55%;
+            height: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .product .title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .product .price {
+            color: #008000;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .product .rating {
+            color: #ffcc00;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .product .add-to-cart {
+            margin-bottom: 10px;
+        }
+
+        .product .add-to-cart button,
+        .product .buy-now button {
+            width: 100%;
+        }
+
+        .btn-cart {
+            background: linear-gradient(to right, #0066ff, #6600ff);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Vikretha</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-cart" href="/cart">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+          <% catalog.forEach((item)=>{ %>
+            <div class="col-lg-4 col-md-6">
+                <div class="product">
+                    <a href="/product/<%= item.product_id %>">
+                    <img src="<%= item.imgurl %>" alt="Earbuds 1">
+                </a>
+                    <div class="title"><%= item.product_name  %></div>
+                    <div class="price">&#8377; <%= item.price %></div>
+                    <div class="rating"><%= item.ratings %></div>/5</div>
+                    <div class="add-to-cart">
+                        
+                        <button id="<%= item.product_id %>" class="btn btn-primary cart">Add to Cart</button>
+                    </div>
+                    <div class="buy-now">
+                       <a href="/buy/product/<%= item.product_id %>"> <button class="btn btn-success">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+           <% })  %>
+           
+        </div>
+    </div>
+    <script>
+        const buttonGroup = document.querySelectorAll(".cart");
+      
+        buttonGroup.forEach((button) => {
+          button.addEventListener('click', (event) => {
+            const productId = button.getAttribute('id');
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST", `/addtocart/${productId}`, true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            
+            xhttp.onreadystatechange = function() {
+              if (this.readyState === 4 && this.status === 200) {
+                console.log(this.responseText)
+                const response = JSON.parse(this.responseText);
+                if (response.status == "ok") {
+                  button.textContent = "Added to Cart";
+                } else {
+                  alert("Already added to cart");
+                }
+              }
+            };
+            
+            xhttp.send();
+          });
+        });
+      </script>
+      
+    <script src="https://cx ode.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

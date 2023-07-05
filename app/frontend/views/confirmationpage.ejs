@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vikretha - Order Confirmation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+        }
+
+        .navbar {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        .order-confirmation {
+            text-align: center;
+            margin-top: 160px;
+            animation: slide-up 0.8s ease-in-out;
+        }
+
+        .order-confirmation .title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: scale-up 0.5s ease-in-out;
+        }
+
+        .order-confirmation .description {
+            font-size: 18px;
+            margin-bottom: 40px;
+            animation: slide-down 0.5s ease-in-out;
+        }
+
+        .order-confirmation .proceed-btn,
+        .order-confirmation .cancel-btn,
+        .order-confirmation .return-btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: slide-up 0.5s ease-in-out;
+        }
+
+        .order-confirmation .proceed-btn {
+            background-color: #008000;
+            color: #fff;
+            animation-delay: 0.3s;
+        }
+
+        .order-confirmation .cancel-btn {
+            background-color: #ff0000;
+            color: #fff;
+            animation-delay: 0.6s;
+        }
+
+        .order-confirmation .return-btn {
+            background-color: #333;
+            color: #fff;
+            animation-delay: 0.9s;
+        }
+
+        @keyframes scale-up {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slide-down {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="navbar-brand">Vikretha</span>
+    </nav>
+
+    <div class="container order-confirmation">
+        <h2 class="title">Order Confirmation</h2>
+        <p class="description">Thank you for your order!</p>
+        <p> you have chosen <%= item.product_name %> which costs &#8377; <%= item.price %></p>
+        <p>IF YOU WANT TO CANCEL THE ORDER CLICK CANCEL ELSE YOU WANT SOME MORE QUANTITY TO BUY THEN GO TO PRODUCT PAGE ADD IT TO CART ELSE PROCEED TO BUY</p>
+       <a href="/order/<%= item.product_id %>"> <button class="proceed-btn btn btn-lg">Proceed to Buy</button></a>
+      <a href="/">  <button class="cancel-btn btn btn-lg">Cancel Order</button></a>
+      <a href="/product/<%= item.product_id %>"> <button class="return-btn btn btn-lg">Return to Product Page</button></a> 
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

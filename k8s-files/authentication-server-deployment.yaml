@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:  
+   name: authentication-server
+   namespace: data
+   
+spec:
+   replicas: 1
+   selector:
+     matchLabels:
+      
+         pod: authentication
+   template:
+      metadata:
+        labels:
+           pod: authentication
+           id: authentication-server
+      spec:
+        serviceAccountName: sql-client
+        containers:
+        - name: cnt-1
+          image: us-central1-docker.pkg.dev/PROJECT_ID/repo-vikretha/authentication-server
+          ports:
+          - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: sql-cred
+          

@@ -1,0 +1,298 @@
+[
+    {
+      "product_id": 101,
+      "product_name": "nike_shoes",
+      "category": "home",
+      "price": 499,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/shoes1.jpg",
+      "ratings": 3.5
+    },
+    {
+      "product_id": 102,
+      "product_name": "sony-zv-1",
+      "category": "home",
+      "price": 20000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/cam-sony.webp",
+      "ratings": 4.3
+    },
+    {
+      "product_id": 103,
+      "product_name": "redmi-firetv",
+      "category": "home",
+      "price": 15000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/firetv-redmi.webp",
+      "ratings": 3.2
+    },
+    {
+      "product_id": 104,
+      "product_name": "redmi-earbuds",
+      "category": "home",
+      "price": 1250,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/earbuds.webp",
+      "ratings": 4.2
+    },
+    {
+      "product_id": 105,
+      "product_name": "redmi-12c",
+      "category": "home",
+      "price": 24000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/reno.webp",
+      "ratings": 4
+    },
+    {
+      "product_id": 106,
+      "product_name": "samsung-m04",
+      "category": "home",
+      "price": 30000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/samsung.webp",
+      "ratings": 3.7
+    },
+    {
+      "product_id": 107,
+      "product_name": "realme-narzo",
+      "category": "mobiles",
+      "price": 23400,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/phones/realmenarzo.webp",
+      "ratings": 3.6
+    },
+    {
+      "product_id": 108,
+      "product_name": "apple",
+      "category": "mobiles",
+      "price": 53000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/phones/apple.webp",
+      "ratings": 4.8
+    },
+    {
+      "product_id": 109,
+      "product_name": "nokia-c12",
+      "category": "mobiles",
+      "price": 29000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/phones/nokia.webp",
+      "ratings": 4.23
+    },
+    {
+      "product_id": 110,
+      "product_name": "redmi-12c",
+      "category": "mobiles",
+      "price": 24000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/phones/redmi12c.webp",
+      "ratings": 3.8
+    },
+    {
+      "product_id": 111,
+      "product_name": "redmi-a2",
+      "category": "mobiles",
+      "price": 27500,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/phones/redmi-a2.webp",
+      "ratings": 3.8
+    },
+    {
+      "product_id": 112,
+      "product_name": "oneplus-11",
+      "category": "mobiles",
+      "price": 30500,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/phones/oneplus.webp",
+      "ratings": 4.1
+    },
+    {
+      "product_id": 113,
+      "product_name": "realme-narzo-55",
+      "category": "mobiles",
+      "price": 21300,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/phones/realme-narzo.webp",
+      "ratings": 4.12
+    },
+    {
+      "product_id": 114,
+      "product_name": "oppo-reno",
+      "category": "mobiles",
+      "price": 23399,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/phones/reno.webp",
+      "ratings": 4.2
+    },
+    {
+      "product_id": 115,
+      "product_name": "samsung",
+      "category": "mobiles",
+      "price": 25499,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/phones/samsung.webp",
+      "ratings": 3.4
+    },
+    {
+      "product_id": 116,
+      "product_name": "dell-vostro-16",
+      "category": "laptops",
+      "price": 65000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/laptops/dell-vostro.webp",
+      "ratings": 4.6
+    },
+    {
+      "product_id": 117,
+      "product_name": "macbook-air",
+      "category": "laptops",
+      "price": 123000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/laptops/macbook-air.webp",
+      "ratings": 4.9
+    },
+    {
+      "product_id": 118,
+      "product_name": "dell-inspiron",
+      "category": "laptops",
+      "price": 80000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/laptops/dell-inspiron.webp",
+      "ratings": 4.1
+    },
+    {
+      "product_id": 119,
+      "product_name": "asus-tuf",
+      "category": "laptops",
+      "price": 56000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/laptops/asus-tuf.webp",
+      "ratings": 3.8
+    },
+    {
+      "product_id": 120,
+      "product_name": "acer-aspire",
+      "category": "laptops",
+      "price": 64000,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/laptops/acer-aspire.webp",
+      "ratings": 3.4
+    },
+    {
+      "product_id": 121,
+      "product_name": "honor-magicbook",
+      "category": "laptops",
+      "price": 59499,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/laptops/honor.webp",
+      "ratings": 4.1
+    },
+    {
+      "product_id": 122,
+      "product_name": "chuwi",
+      "category": "laptops",
+      "price": 67999,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/laptops/chuwi.webp",
+      "ratings": 4.3
+    },
+    {
+      "product_id": 123,
+      "product_name": "timewear",
+      "category": "watches",
+      "price": 3799,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/watches/timewear.webp",
+      "ratings": 4.1
+    },
+    {
+      "product_id": 124,
+      "product_name": "fireboltt-ninja",
+      "category": "watches",
+      "price": 2399,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/watches/fire-boltt-ninja.webp",
+      "ratings": 2.9
+    },
+    {
+      "product_id": 125,
+      "product_name": "timex",
+      "category": "watches",
+      "price": 1299,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/watches/timex.webp",
+      "ratings": 2.9
+    },
+    {
+      "product_id": 126,
+      "product_name": "swadesi-stuff",
+      "category": "watches",
+      "price": 8999,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/watches/swadesi-stuff.webp",
+      "ratings": 3.6
+    },
+    {
+      "product_id": 127,
+      "product_name": "boat-storm",
+      "category": "watches",
+      "price": 2599,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/watches/boat.webp",
+      "ratings": 4.6
+    },
+    {
+      "product_id": 128,
+      "product_name": "louis-devin",
+      "category": "watches",
+      "price": 3500,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/watches/louis-devin.webp",
+      "ratings": 4.3
+    },
+    {
+      "product_id": 129,
+      "product_name": "fasttrack",
+      "category": "watches",
+      "price": 4600,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/watches/fasttrack.webp",
+      "ratings": 4.2
+    },
+    {
+      "product_id": 130,
+      "product_name": "redux",
+      "category": "watches",
+      "price": 1600,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/watches/redux.webp",
+      "ratings": 3.7
+    },
+    {
+      "product_id": 131,
+      "product_name": "tokdis",
+      "category": "watches",
+      "price": 2600,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/watches/tokdis.webp",
+      "ratings": 3.3
+    },
+    {
+      "product_id": 132,
+      "product_name": "samsung-earbuds",
+      "category": "earbuds",
+      "price": 2400,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/earbuds/samsung.webp",
+      "ratings": 4.2
+    },
+    {
+      "product_id": 133,
+      "product_name": "redmi-earbuds",
+      "category": "earbuds",
+      "price": 1300,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/earbuds/redmi.webp",
+      "ratings": 3.8
+    },
+    {
+      "product_id": 134,
+      "product_name": "ptron",
+      "category": "earbuds",
+      "price": 1799,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/earbuds/ptron.webp",
+      "ratings": 4.1
+    },
+    {
+      "product_id": 135,
+      "product_name": "realme-4-buds",
+      "category": "earbuds",
+      "price": 1999,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/earbuds/realme-4.webp",
+      "ratings": 3.9
+    },
+    {
+      "product_id": 136,
+      "product_name": "realme-buds",
+      "category": "earbuds",
+      "price": 999,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/earbuds/realme.webp",
+      "ratings": 4.8
+    },
+    {
+      "product_id": 137,
+      "product_name": "oneplus",
+      "category": "earbuds",
+      "price": 2999,
+      "imgurl": "https://storage.googleapis.com/BUCKET_ID/vikretha-product-images/images/earbuds/oneplus.webp",
+      "ratings": 4.2
+    }
+]

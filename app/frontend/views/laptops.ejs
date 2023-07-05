@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vikretha - Your Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+   <style>
+        body {
+            background: linear-gradient(to bottom, #f1f1f1, #ddd);
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #3366cc;
+            color: #fff;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        .navbar .nav-link {
+            color: #fff;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .product .title {
+            font-weight: bold;
+        }
+
+        .product .price {
+            color: #008000;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product .rating {
+            color: #ffcc00;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .product .add-to-cart,
+        .product .buy-now {
+            margin-top: 10px;
+        }
+
+        .product .add-to-cart button,
+        .product .buy-now button {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Vikretha</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <% catalog.forEach((item)=>{ %>
+            <div class="col-lg-4 col-md-6">
+                <div class="product">
+                    <a href="/product/<%= item.product_id %>">
+                    <img src="<%= item.imgurl %>" alt="Laptop 1">
+                </a>
+                    <div class="title"><%= item.product_name %></div>
+                    <div class="price">&#8377; <%= item.price %></div>
+                    <div class="rating"><%=item.ratings %>/5</div>
+                    <div class="add-to-cart">
+                       
+                        <button  id="<%= item.product_id %>" class="btn btn-primary btn-lg cart">Add to Cart</button>
+                    </div>
+                    <div class="buy-now">
+                     <a href="/buy/product/<%= item.product_id %>">  <button class="btn btn-success btn-lg" >Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+
+        </div>
+    </div>
+    <script>
+        const buttonGroup = document.querySelectorAll(".cart");
+      
+        buttonGroup.forEach((button) => {
+          button.addEventListener('click', (event) => {
+            const productId = button.getAttribute('id');
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST", `/addtocart/${productId}`, true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            
+            xhttp.onreadystatechange = function() {
+              if (this.readyState === 4 && this.status === 200) {
+                console.log(this.responseText)
+                const response = JSON.parse(this.responseText);
+                if (response.status == "ok") {
+                  button.textContent = "Added to Cart";
+                } else {
+                  alert("Already added to cart");
+                }
+              }
+            };
+            
+            xhttp.send();
+          });
+        });
+      </script>
+      
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

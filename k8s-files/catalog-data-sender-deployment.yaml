@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:  
+   name: catalog-data-sender 
+   namespace: data
+spec:
+   replicas: 2
+   selector:
+     matchLabels:
+      
+         pod: catalog
+   template:
+      metadata:
+        labels:
+           pod: catalog
+           id: catalog-data-sender
+      spec:
+        serviceAccountName: sql-client
+        containers:
+        - name: cnt-1
+          image: us-central1-docker.pkg.dev/PROJECT_ID/repo-vikretha/catalog-data-sender
+          ports:
+          - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: sql-cred

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:  
+   name: product-info
+   namespace: data
+spec:
+   replicas: 2
+   selector:
+     matchLabels:
+      
+         pod: product-info
+   template:
+      metadata:
+        labels:
+           pod: product-info
+           id: product-info
+      spec:
+        serviceAccountName: sql-client
+        containers:
+        - name: cnt-1
+          image: us-central1-docker.pkg.dev/PROJECT_ID/repo-vikretha/product-info
+          ports:
+          - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: sql-cred

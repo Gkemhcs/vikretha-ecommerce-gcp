@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:  
+   name: order-manager
+   namespace: data
+spec:
+   replicas: 1
+   selector:
+     matchLabels:
+      
+         pod: order-manager
+   template:
+      metadata:
+        labels:
+           pod: order-manager
+           id: order-manager
+      spec:
+        serviceAccountName: sql-client
+        containers:
+        - name: cnt-1
+          image: us-central1-docker.pkg.dev/PROJECT_ID/repo-vikretha/order-manager
+          ports:
+          - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: sql-cred
