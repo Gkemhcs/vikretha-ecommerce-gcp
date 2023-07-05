@@ -29,7 +29,7 @@ A ECOMMERCE MICRO SERVICE DEPLOYED IN GOOGLE KUBERNETES ENGINE AND DATABASE BACK
  - FIRST CREATE YOUR OWN PROJECT AND ATTACH BILLING ACCOUNT TO IT
  -  THEN CLONE THIS REPOSITORY INTO YOUR CLOUDSHELL OR LOCAL SHELL
   ``` bash
-  git clone https://github.com/Gkemhcs/vikretha-ecommerce-gcp.git . && cd vikretha-ecommerce-gcp
+  git clone https://github.com/Gkemhcs/vikretha-ecommerce-gcp.git  && cd vikretha-ecommerce-gcp
  chmod  +x deploy.sh
 ./deploy.sh
  ```
