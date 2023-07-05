@@ -27,9 +27,11 @@ A ECOMMERCE MICRO SERVICE DEPLOYED IN GOOGLE KUBERNETES ENGINE AND DATABASE BACK
 
 > STEPS TO DEPLOY THE WEBSITE IN YOUR GOOGLE CLOUD PROJECT :-
  - FIRST CREATE YOUR OWN PROJECT AND ATTACH BILLING ACCOUNT TO IT
- -  THEN CLONE THIS REPOSITORY INTO YOUR CLOUDSHELL OR LOCAL SHELL
+ - THEN CLONE THIS REPOSITORY INTO YOUR CLOUDSHELL OR LOCAL SHELL
   ``` bash
-  git clone https://github.com/Gkemhcs/vikretha-ecommerce-gcp.git  && cd vikretha-ecommerce-gcp
- chmod  +x deploy.sh
-./deploy.sh
+    git clone https://github.com/Gkemhcs/vikretha-ecommerce-gcp.git  && cd vikretha-ecommerce-gcp
+    chmod  +x deploy.sh
+    ./deploy.sh
  ```
+** HERE IS MY WEBSITE HOME PAGE LOOKLIKE
+![VIKRETHA-HOMEPAGE](./vikretha-screenshots/vikretha-home.png)
