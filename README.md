@@ -35,4 +35,4 @@ A ECOMMERCE MICRO SERVICE DEPLOYED IN GOOGLE KUBERNETES ENGINE AND DATABASE BACK
  ```
 ** HERE IS MY WEBSITE HOME PAGE LOOKLIKE:-
 
-![VIKRETHA-HOMEPAGE](./vikretha-screenshots/vikretha-home.png)
+![VIKRETHA-HOMEPAGE](./vikretha-screenshots/vikretha-watches.png)
